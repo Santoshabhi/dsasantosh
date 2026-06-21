@@ -1,0 +1,16 @@
+class Solution {
+    public int maxDistance(String moves) {
+          int dx=0;
+        int dy=0;
+        int k=0;
+        for(char ch:moves.toCharArray()){
+            if(ch=='R')dx++;
+            else if(ch=='L')dx--;
+            else if(ch=='U')dy++;
+            else if(ch=='D')dy--;
+            else
+                k++;
+        }
+        return Math.abs(dx) + Math.abs(dy) + k;
+    }
+}©leetcode
